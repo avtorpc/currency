@@ -9,9 +9,13 @@ namespace Application;
 
 class MiniVen extends Component {
 
-    use trait Componemt/Currency;
+    use Componemt\Currency;
 
-    public function Cost (){
-        return $this->getCurrency($this->cash, $this->db, $this->http ) * 1000000;
+    public function cost (){
+        return $this->getCurrency($this->cash, $this->db, $this->http ) . 1000000;
     }
 }
+
+$car = new MiniVen();
+
+print_r( $car->cost() );
