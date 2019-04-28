@@ -6,17 +6,25 @@
  * Time: 15:38
  */
 
-namespace Application\libquery;
+namespace Libquery;
 
 class CurrencyQueryCashes implements Query{
 
-    public function getCurrency( $conn ) {
-        // выполняем подключение к кешу
-        print_r( $conn->get());
+    private $conn;
+
+    public function __construct( $conn ) {
+        $this->conn = &$conn;
     }
 
-    public function setCurrency( $currency, $conn ) {
-        print_r( $conn->get());
-        // устанавливаем валюту в базу
+    public function getCurrency( ) {
+        // выполняем подключение к кешу
+//        echo "<pre>"; var_dump( $this->conn );
+        print_r( $this->conn->get());
+        //return true;
+    }
+
+    public function setCurrency( $currency ) {
+        print_r( 'Записываем ' . $this->conn->get());
+        // устанавливаем валюту в кеш
     }
 }

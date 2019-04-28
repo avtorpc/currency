@@ -6,23 +6,23 @@
  * Time: 16:09
  */
 
-namespace Application\libquery;
+namespace Component;
 
 trait Currency{
 
     public function getCurrency ( $cash, $db, $http ){
-        $currency = $cash->getCurrency( $cash );
+        $currency = $cash->getCurrency( );
         if( !is_null( $currency )) {
 
             return $currency;
         } else {
-            $currency = $db->getCurrency( $db );
+            $currency = $db->getCurrency( );
             if( !is_null( $currency )) {
                 $cash->setCurrency($currency);
 
                 return $currency;
             } else {
-                $currency = $http->getCurrency( $http);
+                $currency = $http->getCurrency( );
                 if( !is_null( $currency )) {
                     $db->setCurrency($currency);
 

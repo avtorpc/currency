@@ -6,17 +6,24 @@
  * Time: 15:39
  */
 
-namespace Application\libquery;
+namespace Libquery;
 
 class CurrencyQueryDB implements Query{
 
-    public function getCurrency( $conn ) {
-        // выполняем подключение к базе данных
-        print_r( $conn->get());
+    private $conn;
+
+    public function __construct( $conn ) {
+        $this->conn = &$conn;
     }
 
-    public function setCurrency( $currency, $conn  ) {
-        print_r( $conn->get());
+    public function getCurrency( ) {
+        // выполняем подключение к базе данных
+        print_r( $this->conn->get());
+        //return true;
+    }
+
+    public function setCurrency( $currency ) {
+        print_r( $this->conn->get());
         // устанавливаем валюту в базу
     }
 }

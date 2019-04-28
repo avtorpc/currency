@@ -6,7 +6,10 @@
   },
   "autoload":{
     "psr-4":{
-      "Application":"app"
+      "Application\\":"app",
+      "Component\\":"app/Component",
+      "Libquery\\": "app/libquery",
+      "Core\\": "app/core"
     }
   }
 }

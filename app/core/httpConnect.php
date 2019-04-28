@@ -5,7 +5,7 @@
  * Date: 2019-04-26
  * Time: 22:33
  */
-namespace Application\core;
+namespace Core;
 
 class httpConnect {
     private $host = 'https://currency.ya.ru';

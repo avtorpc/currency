@@ -5,7 +5,7 @@
  * Date: 2019-04-26
  * Time: 22:22
  */
-namespace Application\core;
+namespace Core;
 
 class dbConnect {
     private $host = 'localhost:4444';

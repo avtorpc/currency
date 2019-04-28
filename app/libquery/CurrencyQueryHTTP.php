@@ -6,17 +6,22 @@
  * Time: 15:39
  */
 
-namespace Application\libquery;
+namespace Libquery;
 
 class CurrencyQueryHTTP implements Query{
 
-    public function getCurrency( $conn ) {
-        // выполняем подключение к удаленному ресурсу
-        // Получаем валюту
-        print_r( $conn->get());
+    private $conn;
+
+    public function __construct( $conn ) {
+        $this->conn = &$conn;
     }
 
-    public function setCurrency($currency, $conn) {
-        // void
+    public function getCurrency( ) {
+        // выполняем подключение к удаленному сайту
+        print_r( $this->conn->get());
+    }
+
+    public function setCurrency( $currency ) {
+      return null;
     }
 }

@@ -5,7 +5,7 @@
  * Date: 2019-04-26
  * Time: 21:41
  */
-namespace Application\core;
+namespace Core;
 
 class cashConnect {
     private $host = 'localhost:3333';

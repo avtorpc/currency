@@ -5,9 +5,9 @@
  * Date: 2019-04-25
  * Time: 15:40
  */
-namespace Application\libquery;
+namespace Libquery;
 
 interface Query {
-    public function getCurrency( $conn );
-    public function setCurrency( $currency, $conn);
+    public function getCurrency( );
+    public function setCurrency( $currency );
 }
